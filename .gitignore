@@ -1,0 +1,33 @@
+# OS X
+.DS_Store*
+Icon?
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+.directory
+*~
+
+
+# npm
+node_modules
+package-lock.json
+*.log
+*.gz
+
+# web
+public/images/avatar
+
+
+
+*.pdf
+*.gif
+*.jpeg
+*.png
+*.svg
+fonts
+*.jpg

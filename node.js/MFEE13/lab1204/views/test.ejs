@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    </script>
+    <style>
+        .img {
+            width: 300;
+            height: 200px;
+        }
+        
+        .fail {
+            color: red;
+        }
+        
+        .pass {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1> view lab</h1>
+    <hr>
+
+    <%   if(userName=="Guset"){ %>
+        <a href="/member/login">Login</a>
+        <% }else{ %>
+            hello!
+            <%= userName %>
+                <% } %>
+                    <hr>
+                    <input type="radio" name="city" value="2" checked>Taipei
+                    <input type="radio" name="city" value="3">TaiChung
+                    <input type="radio" name="city" value="4">TaiNan
+
+
+                    <hr>
+                    <%- twoLines %>
+                        <hr>
+                        <ul>
+                            <% for(data of dataList){ %>
+
+                                <li class="<%= (data<60) ? 'fail':'pass' %>">
+                                    <%= data %>
+                                </li>
+                                <% } %>
+                        </ul>
+                        <hr>
+                        <ul>
+                            <% for(data of dataList){ %>
+                                <% if(data < 60) { %>
+                                    <li class="fail">
+                                        <%= data %>
+                                    </li>
+                                    <% }else{ %>
+                                        <li>
+                                            <%= data %>
+                                        </li>
+                                        <% } %>
+                                            <% } %>
+                        </ul>
+                        <hr>
+                        <img src=" <%= imageFileName %>" class="img">
+
+
+                        <%- include("footer.ejs") %>
+                            <!-- include()引入模組化內容 EX: header footer -->
+                            <!-- 預設路徑是在views裡面 -->
+</body>
+
+
+</html>
+
+<!-- <% %>
+    用來寫JS語法
+    類似PHP使用方式
+    <%= %>
+        輸出
+        <%- %> 
+    不加工的原文輸出 -->

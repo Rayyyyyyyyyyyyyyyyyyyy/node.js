@@ -1,0 +1,9 @@
+Homework:
+
+1. read NodeJS_2_PreTest.pdf
+
+2. Send your answers to: wolfgang.chien@gmail.com
+
+3. Finish MFEE13/Demo/DemoLab_ServerRender
+   compress files into a zip file, and send to teacher Chien.
+

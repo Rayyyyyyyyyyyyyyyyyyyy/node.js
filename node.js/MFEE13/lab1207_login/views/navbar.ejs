@@ -1,0 +1,12 @@
+<ul>
+    <li><a data-ajax="false" href="/" data-icon="home" data-theme="b">Home</a></li>
+    <li>
+        <% if (who=="Guest"){ %>
+            <a data-ajax="false" href="/member/login" data-icon="star" data-theme="b">Login</a>
+            <% }else{ %>
+                <a data-ajax="false" href="/member/logout" data-icon="star" data-theme="b">singOut</a>
+
+                <% } %>
+    </li>
+    <li><a data-ajax="false" href="/member/secret" data-icon="gear" data-theme="b">MemberOnly</a></li>
+</ul>
