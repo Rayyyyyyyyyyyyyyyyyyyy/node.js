@@ -34,34 +34,30 @@
 
     </div>
 
-<script src="../js/jquery.js"></script>
-<script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
-<script>
-    
-    var mailList = [
-        "jeremy.lin@gmail.com", 
-        "derek.jeter@gmail.com",
-        "chien-ming.wang@gmail.com",
-        undefined,
-        "lionel.messi@gmail.com"
+    <script>
+        var mailList = [
+            "jeremy.lin@gmail.com",
+            "derek.jeter@gmail.com",
+            "chien-ming.wang@gmail.com",
+            undefined,
+            "lionel.messi@gmail.com"
         ];
-    
-    function sendMail(mailAddress) {
-        // if (mailAddress != undefined) {
-        //     $("#report").append("資料有缺<br>");
-        //     return;
-        // }
-        $("#report").append(mailAddress.toString() + "<br>");
-    }
-    
-    for (i = 0; i < mailList.length; i++) {
-        sendMail(mailList[i]);
-    }
-    
-    
-    
-</script>
+
+        function sendMail(mailAddress) {
+            if (mailAddress == undefined) {
+                $("#report").append("資料有缺<br>");
+                return;
+            }
+            $("#report").append(mailAddress.toString() + "<br>");
+        }
+
+        for (i = 0; i < mailList.length; i++) {
+            sendMail(mailList[i]);
+        }
+    </script>
 
 </body>
 

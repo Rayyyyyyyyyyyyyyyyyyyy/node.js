@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,48 +17,46 @@
     </style>
 
 </head>
+
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <h1>JavaScript 語法練習</h1>
-    <ul id="latestNews" class="list-group">
-        <li class="list-group-item">TODO: y no var 那一行，如果不寫 var，差別在哪?</li>
-        <li class="list-group-item">TODO: x no var 那一行，如果不寫 var，差別在哪?</li>
-    </ul>
+        <h1>JavaScript 語法練習</h1>
+        <ul id="latestNews" class="list-group">
+            <li class="list-group-item">TODO: y no var 那一行，如果不寫 var，差別在哪?</li>
+            <li class="list-group-item">TODO: x no var 那一行，如果不寫 var，差別在哪?</li>
+        </ul>
 
-    <button type="button" 
-        id="okButton" 
-        class="btn btn-success">
+        <button type="button" id="okButton" class="btn btn-success">
         A. 點按按鈕執行程式
     </button>
 
-    <p class="task-description">B. 檢視結果:</p>
-    <div id="report" class="task-description">
+        <p class="task-description">B. 檢視結果:</p>
+        <div id="report" class="task-description">
+        </div>
+
     </div>
 
-</div>
+    <script>
+        var x = 100;
 
-<script>
+        $(document).ready(function() {
+            var y = 200; // TODO: y no var
 
-var x = 100;
+            $("#okButton").on('click', function() {
+                var x = 300; // TODO: x no var
 
-$(document).ready(function () {
-    var y = 200; // TODO: y no var
-
-    $("#okButton").on('click', function () {
-        var x = 300;  // TODO: x no var
-
-        report.innerHTML = `
+                report.innerHTML = `
             x = ${x}<br>
             window.x = ${window.x}<br>
             window.y = ${window.y}<br>
         `;
-    })
+            })
 
-})
+        })
+    </script>
 
-</script>
-            
 </body>
+
 </html>
